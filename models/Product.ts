@@ -18,3 +18,7 @@ export class Product {
         return calculateTax(this);
     }
 }
+
+export interface DiscountableProduct {
+  applyDiscount(percentage: number): number;
+}
