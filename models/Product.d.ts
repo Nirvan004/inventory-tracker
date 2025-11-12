@@ -6,4 +6,7 @@ export declare class Product {
     displayDetails(): string;
     getPriceWithTax(): number;
 }
+export interface DiscountableProduct {
+    applyDiscount(percentage: number): number;
+}
 //# sourceMappingURL=Product.d.ts.map
