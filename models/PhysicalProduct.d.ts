@@ -6,5 +6,6 @@ export declare class PhysicalProduct extends Product implements DiscountableProd
     getPriceWithTax(): number;
     get formattedWeight(): string;
     applyDiscount(percentage: number): number;
+    applyBulkDiscount(minWeight: number, bulkDiscount: number): number;
 }
 //# sourceMappingURL=PhysicalProduct.d.ts.map

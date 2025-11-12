@@ -19,5 +19,14 @@ export class PhysicalProduct extends Product {
         this.price = this.price * (1 - percentage);
         return this.price;
     }
+    applyBulkDiscount(minWeight, bulkDiscount) {
+        if (bulkDiscount < 0 || bulkDiscount > 1) {
+            throw new Error('Bulk discount percentage must be between 0 and 1');
+        }
+        if (this.weight >= minWeight) {
+            this.price = this.price * (1 - bulkDiscount);
+        }
+        return this.price;
+    }
 }
 //# sourceMappingURL=PhysicalProduct.js.map
